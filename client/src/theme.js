@@ -24,7 +24,8 @@ export const theme = createTheme({
             default: '#fff',        //for card background
             home: '#fafafa',        //for background     
             paper: '#f4f5fa',
-            disabled:'#ebebeb'
+            disabled:'#ebebeb',
+            border:'#e7e7e8',
         },
         error: {
             main: '#ff4c51',       //for text and buttons

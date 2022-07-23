@@ -8,9 +8,9 @@ import { theme } from "../../theme";
 import ProfileMenu from "../Menu/ProfileMenu";
 import NotificationMenu from "../Menu/NotificationMenu";
 
-const pages = ["Home", "Updates", "Services", "Features", "About"];
+const pages = ["Home", "Updates", "Services", "Features", "About"];              // pages to be displayed in the navbar menu
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
+const StyledBadge = styled(Badge)(({ theme }) => ({                               // StyledBadge component to display the number of unread notifications in the navbar
   '& .MuiBadge-badge': {
     backgroundColor: '#44b700',
     color: '#44b700',
@@ -40,37 +40,37 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
-  const [anchorElNotifications, setAnchorElNotifications] = useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);                   // anchorElNav is the anchor element for the navbar menu
+  const [anchorElUser, setAnchorElUser] = useState(null);                        // anchorElUser is the anchor element for the user menu
+  const [anchorElNotifications, setAnchorElNotifications] = useState(null);          // anchorElNotifications is the anchor element for the notifications menu 
 
-  const handleOpenNotificationsMenu = (event) => {
+  const handleOpenNotificationsMenu = (event) => {                              // handleOpenNotificationsMenu is used to open the notifications menu
     setAnchorElNotifications(event.currentTarget);
   }
 
-  const handleCloseNotificationMenu = (event) => {
+  const handleCloseNotificationMenu = (event) => {                       // handleCloseNotificationMenu is used to close the notifications menu
     setAnchorElNotifications(null);
   }
 
-  const handleOpenNavMenu = (event) => {
+  const handleOpenNavMenu = (event) => {                              // handleOpenNavMenu is used to open the navbar menu
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
+  const handleOpenUserMenu = (event) => {                            // handleOpenUserMenu is used to open the user menu
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = () => {                               // handleCloseNavMenu is used to close the navbar menu
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
+  const handleCloseUserMenu = () => {                                  // handleCloseUserMenu is used to close the user menu
     setAnchorElUser(null);
   };
 
   return (
-    <AppBar elevation={0} position="static" sx={{position:'relative' ,zIndex:(theme) => theme.zIndex.drawer + 1, borderBottom:'1px solid'+theme.palette.text.secondary }}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar elevation={0} position="static" sx={{position:'relative' ,zIndex:(theme) => theme.zIndex.drawer + 1, borderBottom:'1px solid'+theme.palette.text.secondary }}>  // AppBar component
+      <Container maxWidth="xl">                                     
+        <Toolbar disableGutters>                                 
           <img src={images.HomeLogo} alt="" />
           <Typography
             variant="h5"
@@ -137,7 +137,7 @@ const Navbar = () => {
             open={Boolean(anchorElNotifications)}
             onClose={handleCloseNotificationMenu}
           >
-            <NotificationMenu fontSize="large"/>
+            <NotificationMenu fontSize="large"/>                         
             </Menu>
             <Tooltip title="Open settings">
               <IconButton
@@ -154,7 +154,7 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              PaperProps={{ sx: { width: "100%" , maxWidth:'230px',height:'100%',maxHeight:'200px' } }}
+              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'210px', p:0, m: 0, backgroundColor:theme.palette.background.default} }}
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -169,8 +169,8 @@ const Navbar = () => {
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
-            >
-              <ProfileMenu />
+              >                                                   
+                <ProfileMenu />                                    
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
@@ -182,9 +182,9 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon color="primary" fontSize="large"/>
+              <MenuIcon color="primary" fontSize="large"/>                       
             </IconButton>
-            <Menu
+            <Menu                                                      // Menu component is used to display the navbar menu in the navbar when the menu button is clicked in mobile view
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{

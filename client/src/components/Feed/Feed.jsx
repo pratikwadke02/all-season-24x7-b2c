@@ -6,7 +6,7 @@ import PaginationComponent from "../utils/Pagination/PaginationComponent";
 const Feed = () => {
   return (
     <>
-      <Box
+      <Box                       // This is the main container for the feed component
         flex={7}
         sx={{
           display: "flex",
@@ -17,8 +17,8 @@ const Feed = () => {
           paddingBottom: "60px",
         }}
       >
-        <div>
-          <Card />
+        <div>                      
+          <Card />                        
         </div>
         <div>
           <Card />
@@ -30,7 +30,7 @@ const Feed = () => {
           flex={1}
           sx={{ alignItems: "center", position: "absolute", bottom: 0 }}
         >
-          <PaginationComponent />
+          <PaginationComponent />                  
         </Box>
       </Box>
     </>

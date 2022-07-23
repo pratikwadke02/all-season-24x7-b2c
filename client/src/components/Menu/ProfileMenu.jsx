@@ -1,11 +1,18 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
-import { Divider } from "@mui/material";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-import { MenuItem, IconButton, Typography, Avatar, Box } from "@mui/material";
+import {
+  MenuItem,
+  IconButton,
+  Typography,
+  Avatar,
+  Box,
+  MenuList,
+  styled,
+} from "@mui/material";
+import { theme } from "../../theme";
 import { images } from "../../constants";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -39,8 +46,13 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const ProfileMenu = () => {
   return (
-    <>
-      <MenuItem>
+    <MenuList sx={{ pt: 0, pb: 0 }}>
+      <MenuItem
+        sx={{
+          maxHeight: "60px",
+          borderBottom: "1px solid" + theme.palette.background.border,
+        }}
+      >
         <IconButton>
           <StyledBadge
             overlap="circular"
@@ -58,7 +70,11 @@ const ProfileMenu = () => {
               alignItems: "flex-start",
             }}
           >
-            <Typography variant="h6" noWrap>
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{ fontWeight: theme.typography.fontWeightBold }}
+            >
               John Doe
             </Typography>
             <Typography variant="caption" noWrap>
@@ -67,33 +83,39 @@ const ProfileMenu = () => {
           </Box>
         </IconButton>
       </MenuItem>
-      <Divider />
-      <MenuItem>
+      {/* <Divider /> */}
+      <MenuItem sx={{ maxHeight: "40px" }}>
         <IconButton>
-          <PermIdentityOutlinedIcon fontSize="large" />
-          <Typography variant="h6" noWrap sx={{pl:2}}>
+          <PermIdentityOutlinedIcon fontSize="medium" />
+          <Typography variant="h6" noWrap sx={{ pl: 1 }}>
             Profile
           </Typography>
         </IconButton>
       </MenuItem>
       <MenuItem>
         <IconButton>
-          <HelpOutlineOutlinedIcon fontSize="large" />
-          <Typography variant="h6" noWrap sx={{pl:2}} >
+          <HelpOutlineOutlinedIcon fontSize="medium" />
+          <Typography variant="h6" noWrap sx={{ pl: 1 }}>
             FAQ
           </Typography>
         </IconButton>
       </MenuItem>
-      <Divider />
-      <MenuItem>
+      {/* <Divider /> */}
+      <MenuItem
+        sx={{
+          maxHeight: "40px",
+          borderTop: "1px solid" + theme.palette.background.border,
+        }}
+        dense="true"
+      >
         <IconButton>
-          <LogoutOutlinedIcon fontSize="large" />
-          <Typography variant="h6" noWrap sx={{pl:2}}>
+          <LogoutOutlinedIcon fontSize="medium" />
+          <Typography variant="h6" noWrap sx={{ pl: 1 }}>
             Logout
           </Typography>
         </IconButton>
       </MenuItem>
-    </>
+    </MenuList>
   );
 };
 

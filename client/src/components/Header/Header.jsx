@@ -1,4 +1,11 @@
-import { Box, Container, IconButton, Stack, Typography,styled } from "@mui/material";
+import {
+  Box,
+  Container,
+  IconButton,
+  Stack,
+  Typography,
+  styled,
+} from "@mui/material";
 import React from "react";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import TableRowsIcon from "@mui/icons-material/TableRows";
@@ -8,21 +15,15 @@ import Rightbar from "../Rightbar/Rightbar";
 import Drawer from "@mui/material/Drawer";
 import { theme } from "../../theme";
 
-const drawerWidth = 340;
-
-
-
-
+const drawerWidth = 340; //defined drawer width here as it is not defined in the theme file and it is working on mobile view
 
 const Header = () => {
-  
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
+    //handle drawer toggle
     setMobileOpen(!mobileOpen);
   };
-
-  // const container = window !== undefined ? () => window().document.body : undefined;
 
   const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
@@ -41,14 +42,13 @@ const Header = () => {
         aria-label="mailbox folders"
       >
         <Drawer
-          // container={container}
-          PaperProps = {{
-            sx : {
-              display: 'flex',
-              flexDirection: 'column',
+          PaperProps={{
+            sx: {
+              display: "flex",
+              flexDirection: "column",
               backgroundColor: "#fff",
-              border: 'none'
-              }
+              border: "none",
+            },
           }}
           anchor="right"
           variant="temporary"
@@ -65,22 +65,19 @@ const Header = () => {
             },
           }}
         >
-          {/* <DrawerHeader>
-          </DrawerHeader> */}
-          <Rightbar mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle}/>
+          <Rightbar                                       //Rightbar is the component which is used to render the right side drawer 
+            mobileOpen={mobileOpen}                       //mobileOpen is the state which is used to toggle the drawer
+            handleDrawerToggle={handleDrawerToggle}       //handleDrawerToggle is the function which is used to toggle the drawer
+          />
         </Drawer>
       </Box>
-      {/* {filter && (
-        <Rightbar  />
-      )} */}
       <Container
         sx={{
           p: 3,
           borderBottom: "1px solid lightgrey",
           display: "flex",
-          alignItems: {xs:"flex-start", sm:"center"},
+          alignItems: { xs: "flex-start", sm: "center" },
           flexDirection: { xs: "column", sm: "row" },
-          // justifyContent: {xs: 'flex-start', sm:'none'},
         }}
       >
         <Typography
@@ -115,7 +112,7 @@ const Header = () => {
             </Box>
           </Box>
           <Box flex={0}>
-            <DropdownComponent />
+            <DropdownComponent label="Sort" />                 
           </Box>
           <IconButton
             sx={{ alignItems: "center", display: { xs: "flex", sm: "none" } }}

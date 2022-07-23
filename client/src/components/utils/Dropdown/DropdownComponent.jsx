@@ -4,7 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const DropdownComponent = () => {
+const DropdownComponent = (props) => {
   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -14,14 +14,14 @@ const DropdownComponent = () => {
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
+        <InputLabel id="demo-simple-select-autowidth-label">{props.label}</InputLabel>
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
           value={age}
           onChange={handleChange}
           autoWidth
-          label="Age"
+          label={props.label}
         >
           <MenuItem value="">
             <em>None</em>

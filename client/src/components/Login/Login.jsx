@@ -22,7 +22,7 @@ const Login = () => {
           borderRadius: "5px",
           pt: 1,
           pb: 1,
-          pl:{xs:'24px'},
+          // pl:{xs:'24px'},
         }}
       >
         <Box
@@ -48,8 +48,8 @@ const Login = () => {
             />
           </IconButton>
         </Box>
-        <Box sx={{mt:2, maxWidth:400}}>
-           <PhoneComponent /> 
+        <Box sx={{mt:2}}>
+           <PhoneComponent />                                         
           <Button
             color="info"
             variant="contained"

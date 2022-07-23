@@ -22,7 +22,7 @@ const PhoneComponent = () => {
 
   return (
     <>
-    <Box sx={{maxWidth:390, width:'100%', minHeight: 47, border:'1px solid' +theme.palette.text.secondary, borderRadius:'10px', display:'flex',alignItems:'center',pl:1}}>
+    <Box sx={{width:'98%', minHeight: 47, border:'1px solid' +theme.palette.text.secondary, borderRadius:'5px', display:'flex',alignItems:'center',pl:1}}>
         <img src={images.flag} alt="flag" />
         <Box sx={{width:50}}>
         <NoBorderTextField placeholder='+91' type="text" inputMode='numeric' inputProps={{pattern: '[0-9]*'}}/>

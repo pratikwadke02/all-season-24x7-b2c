@@ -1,4 +1,11 @@
-import { Container, IconButton, Typography, Box, Button, Checkbox } from "@mui/material";
+import {
+  Container,
+  IconButton,
+  Typography,
+  Box,
+  Button,
+  Checkbox,
+} from "@mui/material";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { theme } from "../../theme";
@@ -7,19 +14,18 @@ import GoogleIcon from "@mui/icons-material/Google";
 import TextfieldComponent from "../utils/Textfield/TextfieldComponent";
 
 const Signup = () => {
-
   const [checked, setChecked] = React.useState(false);
 
   const handleChecked = (event) => {
     setChecked(event.target.checked);
-  }
+  };
 
   return (
     <>
-    <Container
+      <Container
         sx={{
-          maxWidth: {xs: '448px'},
-          maxHeight: '472px',
+          maxWidth: { xs: "448px" },
+          maxHeight: "472px",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -28,7 +34,7 @@ const Signup = () => {
           borderRadius: "5px",
           pt: 1,
           pb: 1,
-          pl:{xs:'24px'},
+          // pl:{xs:'24px'},
         }}
       >
         <Box
@@ -36,8 +42,7 @@ const Signup = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
-            mt:1,
-            maxWidth: 400
+            mt: 1,
           }}
         >
           <Typography
@@ -56,31 +61,65 @@ const Signup = () => {
           </IconButton>
         </Box>
         <Box>
-          <Box sx={{mt:3,mb:3,maxWidth: 400}}>
-          <TextfieldComponent label="Full Name" type="string"/>
+          <Box sx={{ mt: 3, mb: 3 }}>
+            <TextfieldComponent label="Full Name" type="string" />
           </Box>
-          <Box sx={{mt:2,maxWidth: 400}}>
-          <TextfieldComponent label="Email" type="email"/>
+          <Box sx={{ mt: 2 }}>
+            <TextfieldComponent label="Email" type="email" />
           </Box>
-          <Box sx={{display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'flex-start'}}>
-          {/* <Typography variant="h7" color={theme.palette.cancel.dark}>
-            Invalid Email id
-          </Typography> */}
-          <Box sx={{display:'flex', flexDirection:'row' ,mt:1, alignItems:'flex-start'}}>
-          <Checkbox checked = {checked} onChange={handleChecked} inputProps={{ 'aria-label': 'contolled' }} sx={{m:-1}}/>
-          <Box sx={{maxWidth: 400}}>
-          <Typography variant="h7" color={theme.palette.text.primary}>
-            I agree to All Season 24x7's <a style={{textDecoration:'none', color:theme.palette.login.main}} href="#">Terms of service Policy</a>  and <a style={{textDecoration:'none', color:theme.palette.login.main}} href="#">Content Policy</a>
-          </Typography>
-          </Box>
-          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                mt: 1,
+                alignItems: "flex-start",
+              }}
+            >
+              <Checkbox
+                checked={checked}
+                onChange={handleChecked}
+                inputProps={{ "aria-label": "contolled" }}
+                sx={{ m: -1 }}
+              />
+              <Box sx={{ maxWidth: 400 }}>
+                <Typography variant="h7" color={theme.palette.text.primary}>
+                  I agree to All Season 24x7's{" "}
+                  <a
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.login.main,
+                    }}
+                    href="#"
+                  >
+                    Terms of service Policy
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.login.main,
+                    }}
+                    href="#"
+                  >
+                    Content Policy
+                  </a>
+                </Typography>
+              </Box>
+            </Box>
           </Box>
           <Button
             color="info"
             variant="contained"
             sx={{
               width: "100%",
-              maxWidth: 400,
               backgroundColor: theme.palette.login.main,
               minHeight: 47,
               mb: 1,
@@ -93,7 +132,6 @@ const Signup = () => {
         <Divider
           textAlign="center"
           sx={{
-            maxWidth: 400,
             width: "100%",
             mt: 1,
           }}
@@ -106,7 +144,7 @@ const Signup = () => {
             or
           </Typography>
         </Divider>
-        <Box sx={{ mt: 2,maxWidth: 400 }}>
+        <Box sx={{ mt: 2}}>
           <Button
             variant="outlined"
             color="inherit"
@@ -119,7 +157,7 @@ const Signup = () => {
             >
               <GoogleIcon
                 fontSize="large"
-                sx={{ color: theme.palette.text.primary,pr: 1 }}
+                sx={{ color: theme.palette.text.primary, pr: 1 }}
               />
               Continue with Google
             </Typography>
@@ -137,14 +175,14 @@ const Signup = () => {
               variant="h6"
               color={theme.palette.text.primary}
               sx={{ color: theme.palette.login.main }}
-              >
+            >
               Login
             </Typography>
           </Box>
         </Box>
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;

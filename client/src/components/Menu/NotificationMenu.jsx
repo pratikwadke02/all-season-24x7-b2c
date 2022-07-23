@@ -1,13 +1,14 @@
 import { Divider, Typography,Box, Avatar, Button } from "@mui/material";
 import React from "react";
 import {images} from '../../constants/index';
+import { theme } from "../../theme";
 
 const NotificationMenu = () => {
   return (
     <>
-      <Box>
-        <Box sx={{ display: "flex", justifyContent: "space-between" ,alignItems:'center', p:1}}>
-          <Typography variant="h6" color="inherit">
+      <Box sx={{p:1}}>
+        <Box sx={{ display: "flex", justifyContent: "space-between" ,alignItems:'center',p:1}}>
+          <Typography variant="h5" color="inherit">
             Notifications
           </Typography>
           <Typography
@@ -38,7 +39,7 @@ const NotificationMenu = () => {
                 alignItems: "flex-start",
               }}
             >
-              <Typography variant="h5" noWrap>
+              <Typography variant="h5" noWrap sx={{fontWeight:theme.typography.fontWeightBold}}>
                 Congratulation flora!
               </Typography>
               <Typography variant="caption" noWrap>
@@ -47,7 +48,7 @@ const NotificationMenu = () => {
             </Box>
           </Box>
           <Box sx={{display:'flex', alignItems:'center'}}>
-            <Typography variant="caption" color="inherit">
+            <Typography variant="caption" sx={{color:theme.palette.text.secondary}} >
               Today
             </Typography>
           </Box>
@@ -65,7 +66,7 @@ const NotificationMenu = () => {
                 alignItems: "flex-start",
               }}
             >
-              <Typography variant="h6" noWrap>
+              <Typography variant="h6" noWrap sx={{fontWeight:theme.typography.fontWeightBold}}>
               New user registered
               </Typography>
               <Typography variant="caption" noWrap>
@@ -74,7 +75,7 @@ const NotificationMenu = () => {
             </Box>
           </Box>
           <Box sx={{display:'flex', alignItems:'center'}}>
-            <Typography variant="caption" color="inherit">
+            <Typography variant="caption" sx={{color:theme.palette.text.secondary}} >
               Yesterday
             </Typography>
           </Box>
@@ -92,7 +93,7 @@ const NotificationMenu = () => {
                 alignItems: "flex-start",
               }}
             >
-              <Typography variant="h6" noWrap>
+              <Typography variant="h6" noWrap sx={{fontWeight:theme.typography.fontWeightBold}}>
                 New message received
               </Typography>
               <Typography variant="caption" noWrap>
@@ -101,14 +102,14 @@ const NotificationMenu = () => {
             </Box>
           </Box>
           <Box sx={{display:'flex', alignItems:'center'}}>
-            <Typography variant="caption" color="inherit">
+            <Typography variant="caption" sx={{color:theme.palette.text.secondary}}>
               11 Aug
             </Typography>
           </Box>
         </Box>
         <Divider />
         <Box sx={{p:1 }}>
-            <Button variant="contained" sx={{backgroundColor:"#9155fd", color:'#fff',width:'100%'}}>
+            <Button variant="contained" color="info" sx={{backgroundColor:theme.palette.login.main, color:'#fff',width:'100%'}}>
                 <Typography variant="h6" color="inherit">
                 CONNECT NOW
                 </Typography>
