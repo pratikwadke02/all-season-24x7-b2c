@@ -7,8 +7,8 @@ function App() {
   return (
     <>
     <ThemeProvider theme = {theme}>
-      {/* <Home /> */}
-      <Auth />
+      <Home />
+      {/* <Auth /> */}
     </ThemeProvider>
     </>
   );

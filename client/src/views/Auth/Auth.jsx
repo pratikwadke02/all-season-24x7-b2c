@@ -7,8 +7,8 @@ const Auth = () => {
   return (
     <>
     <Box sx={{backgroundColor:'#e0e0e1', height:'100vh', width:'100%', display:'flex', alignItems:'center'}}>
-        {/* <Login /> */}
-        <Signup />
+        <Login />
+        {/* <Signup /> */}
     </Box>
     </>
   )
