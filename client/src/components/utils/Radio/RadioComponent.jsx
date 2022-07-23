@@ -1,22 +1,22 @@
 import React, {useState} from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import {Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, Typography} from '@mui/material';
+import {theme} from '../../../theme';
 
 const RadioComponent = (props) => {
   return (
     <FormControl sx={{ m: 1, width: 300 }}>
-      <FormLabel id="demo-radio-buttons-group-label">{props.formLabel}</FormLabel>
+      <FormLabel id="demo-radio-buttons-group-label">
+        <Typography variant="h7" sx={{color:theme.palette.text.primary, fontWeight:theme.typography.fontWeightBold}}>{props.formLabel}
+        </Typography>
+          </FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         defaultValue="none"
         name="radio-buttons-group"
       >
-        <FormControlLabel value={props.optionA} control={<Radio />} label={props.optionA} />
-        <FormControlLabel value={props.optionB} control={<Radio />} label={props.optionB} />
-        <FormControlLabel value={PaymentResponse.optionC} control={<Radio />} label={props.optionC} />
+        <FormControlLabel value={props.optionA} control={<Radio />} label={<Typography variant="h6" >{props.optionA}</Typography>} />
+        <FormControlLabel value={props.optionB} control={<Radio />} label={<Typography variant="h6" >{props.optionB}</Typography>} />
+        <FormControlLabel value={PaymentResponse.optionC} control={<Radio />} label={<Typography variant="h6" >{props.optionC}</Typography>} />
       </RadioGroup>
     </FormControl>
   );

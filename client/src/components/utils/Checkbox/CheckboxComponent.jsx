@@ -1,11 +1,7 @@
 import React , {useState} from 'react';
-import Box from '@mui/material/Box';
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
-import Checkbox from '@mui/material/Checkbox';
+import { Typography, FormControl,FormLabel,FormGroup, FormControlLabel,Checkbox  } from '@mui/material';
+import { theme } from '../../../theme';
+
 
 const CheckboxComponent = (props) => {
 
@@ -19,8 +15,10 @@ const CheckboxComponent = (props) => {
 
   return (
     <>
-    <FormControl sx={{ m: 1 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">{props.formLabel}</FormLabel>
+    <FormControl sx={{ml:1 }} component="fieldset" variant="standard">
+        <FormLabel component="legend">
+          <Typography variant="h7" sx={{color:theme.palette.text.primary, fontWeight:theme.typography.fontWeightBold}}>{props.formLabel}</Typography>
+          </FormLabel>
         <FormGroup>
           <FormControlLabel
             control={
@@ -30,7 +28,7 @@ const CheckboxComponent = (props) => {
             //   name="gilad" 
               />
             }
-            label={props.optionA}
+            label={<Typography variant="h6" >{props.optionA}</Typography>}
           />
           <FormControlLabel
             control={
@@ -40,7 +38,7 @@ const CheckboxComponent = (props) => {
             //   name="jason" 
               />
             }
-            label={props.optionB}
+            label={<Typography variant="h6" >{props.optionB}</Typography>}
           />
           <FormControlLabel
             control={
@@ -50,7 +48,7 @@ const CheckboxComponent = (props) => {
             //   name="antoine" 
               />
             }
-            label={props.optionC}
+            label={<Typography variant="h6" >{props.optionC}</Typography>}
           />
           <FormControlLabel
             control={
@@ -60,7 +58,7 @@ const CheckboxComponent = (props) => {
             //   name="antoine" 
               />
             }
-            label={props.optionD}
+            label={<Typography variant="h6" >{props.optionD}</Typography>}
           />
         </FormGroup>
       </FormControl>
