@@ -13,7 +13,7 @@ const Home = () => {
         <Navbar />
         <Header />
         <Container disableGutters>
-            <Stack direction={"row"} spacing={1} justifyContent="space-between">
+            <Stack direction={"row"} justifyContent="space-between">
                 <Sidebar/>
                 <Feed />
             </Stack>

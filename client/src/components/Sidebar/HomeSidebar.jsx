@@ -1,11 +1,10 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react';
 import { Button } from '@mui/material'
 import CheckboxComponent from '../utils/Checkbox/CheckboxComponent';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import RadioComponent from '../utils/Radio/RadioComponent';
-import SearchComponent from '../utils/Search/SearchComponent';
 import SearchWithIcon from '../utils/Search/SearchWithIcon';
 
 const HomeSidebar = () => {
@@ -23,7 +22,11 @@ const HomeSidebar = () => {
     <SearchWithIcon label="Location" id="location" icon={locationIcon} position="end" adornment="endAdornment"/>
     </Box>
     <Box sx={{p:1}}>
-        <Button variant="contained" color="info" sx={{minWidth: 320, width:'100%', color:'#ffffff', backgroundColor:'#2196f3'}}>Search</Button>
+        <Button variant="contained" color="info" sx={{minWidth: 320, width:'100%',minHeight:42, color:'#ffffff', backgroundColor:'#2196f3'}}>
+          <Typography variant="h5">
+            Search
+          </Typography>
+          </Button>
     </Box>
     <Box sx={{p:1}}>
       <RadioComponent formLabel="Status" optionA = "Label" optionB = "Open" optionC = "Archived" />

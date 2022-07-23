@@ -68,7 +68,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar elevation={0} position="static" sx={{position:'relative' ,zIndex:(theme) => theme.zIndex.drawer + 1, borderBottom:'1px solid'+theme.palette.text.secondary }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src={images.HomeLogo} alt="" />
@@ -137,7 +137,7 @@ const Navbar = () => {
             open={Boolean(anchorElNotifications)}
             onClose={handleCloseNotificationMenu}
           >
-            <NotificationMenu />
+            <NotificationMenu fontSize="large"/>
             </Menu>
             <Tooltip title="Open settings">
               <IconButton
@@ -182,7 +182,7 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon color="primary" fontSize="large"/>
             </IconButton>
             <Menu
               id="menu-appbar"

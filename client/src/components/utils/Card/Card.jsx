@@ -15,7 +15,7 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 export default function CardComponent() {
 
   return (
-    <Card sx={{ maxWidth: 1100, m: 1, backgroundColor:theme.palette.background.default}}>
+    <Card sx={{ maxWidth: 1100, m: 2, backgroundColor:theme.palette.background.default}}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: grey[400] }} aria-label="recipe">
@@ -35,7 +35,7 @@ export default function CardComponent() {
       <CardContent>
         <Typography variant="body2" color="text.other" sx={{fontWeight: theme.typography.fontWeightMedium}}>
         Exciting news! I’m hiring mid-level and senior Product Designers to join my team at Acme, where we’re building the future of eCommerce.
-        <ul style= {{padding: 0, margin: 10}}>
+        <ul style= {{padding: 0,margin:10}}>
             <li>Own a product area, work cross-platform</li>
             <li>Small, talented, tight-knit team</li>
             <li>SF, ATL or Remote</li>
@@ -43,10 +43,10 @@ export default function CardComponent() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button variant="contained" color="inherit" sx={{color:theme.palette.primary.main , fontSize: theme.typography.fontSize, fontWeight:theme.typography.fontWeightMedium}}>
+        <Button color="inherit" sx={{backgroundColor:'#f6fafd' ,color:theme.palette.primary.main , fontSize: theme.typography.fontSize, fontWeight:theme.typography.fontWeightBold}}>
             Apply
         </Button>
-        <Button variant="conatined" color="primary" sx={{color: '#2196f3', fontSize: theme.typography.fontSize, fontWeight:theme.typography.fontWeightMedium}} startIcon={<RemoveRedEyeIcon />}>
+        <Button variant="conatined" color="primary" sx={{color: '#2196f3', fontSize: theme.typography.fontSize, fontWeight:theme.typography.fontWeightBold}} startIcon={<RemoveRedEyeIcon />}>
             WATCH
         </Button>
       </CardActions>
