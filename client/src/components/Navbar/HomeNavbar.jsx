@@ -154,7 +154,7 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'210px', p:0, m: 0, backgroundColor:theme.palette.background.default} }}
+              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'220px', p:0, m: 0, backgroundColor:theme.palette.background.default} }}
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
