@@ -1,6 +1,6 @@
 import { images } from "../../constants";
 import React from "react";
-import {AppBar, Box, Toolbar, Container, Typography, Button, Tooltip, IconButton,Menu, Avatar, MenuItem, styled, Badge} from "@mui/material";
+import {AppBar, Box, Toolbar, Container, Typography, Button, Tooltip, IconButton,Menu, Avatar, MenuItem, styled, Badge, CssBaseline} from "@mui/material";
 import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
@@ -68,7 +68,9 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar elevation={0} position="static" sx={{position:'relative' ,zIndex:(theme) => theme.zIndex.drawer + 1, borderBottom:'1px solid'+theme.palette.text.secondary }}>  // AppBar component
+    <>
+    <CssBaseline />
+    <AppBar elevation={0} position="static" sx={{position:'relative' ,zIndex:(theme) => theme.zIndex.drawer + 1, borderBottom:'1px solid'+theme.palette.text.secondary }}>  
       <Container maxWidth="xl">                                     
         <Toolbar disableGutters>                                 
           <img src={images.HomeLogo} alt="" />
@@ -246,6 +248,7 @@ const Navbar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    </>
   );
 };
 export default Navbar;
