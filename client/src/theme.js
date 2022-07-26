@@ -45,7 +45,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Poppins, sans-serif",
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
