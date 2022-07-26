@@ -71,13 +71,13 @@ const ProfileMenu = () => {
             }}
           >
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               sx={{ fontWeight: theme.typography.fontWeightBold }}
             >
               John Doe
             </Typography>
-            <Typography variant="caption" noWrap>
+            <Typography variant="h6" noWrap>
               Admin
             </Typography>
           </Box>
@@ -87,7 +87,7 @@ const ProfileMenu = () => {
       <MenuItem sx={{ maxHeight: "40px" }}>
         <IconButton>
           <PermIdentityOutlinedIcon fontSize="medium" />
-          <Typography variant="h6" noWrap sx={{ pl: 1 }}>
+          <Typography variant="h5" noWrap sx={{ pl: 1 }}>
             Profile
           </Typography>
         </IconButton>
@@ -95,7 +95,7 @@ const ProfileMenu = () => {
       <MenuItem>
         <IconButton>
           <HelpOutlineOutlinedIcon fontSize="medium" />
-          <Typography variant="h6" noWrap sx={{ pl: 1 }}>
+          <Typography variant="h5" noWrap sx={{ pl: 1 }}>
             FAQ
           </Typography>
         </IconButton>
@@ -110,7 +110,7 @@ const ProfileMenu = () => {
       >
         <IconButton>
           <LogoutOutlinedIcon fontSize="medium" />
-          <Typography variant="h6" noWrap sx={{ pl: 1 }}>
+          <Typography variant="h5" noWrap sx={{ pl: 1 }}>
             Logout
           </Typography>
         </IconButton>

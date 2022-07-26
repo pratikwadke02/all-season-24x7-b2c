@@ -8,14 +8,14 @@ const NotificationMenu = () => {
     <>
       <Box sx={{p:1}}>
         <Box sx={{ display: "flex", justifyContent: "space-between" ,alignItems:'center',p:1}}>
-          <Typography variant="h5" color="inherit">
+          <Typography variant="h3" color="inherit">
             Notifications
           </Typography>
           <Typography
-            variant="h7"
+            variant="h6"
             color="inherit"
             sx={{  
-              color: "#9155fd",
+              color: theme.palette.secondary.main,
               backgroundColor: "#f2ebff",
               width: "51px",
               height: "20px",
@@ -66,7 +66,7 @@ const NotificationMenu = () => {
                 alignItems: "flex-start",
               }}
             >
-              <Typography variant="h6" noWrap sx={{fontWeight:theme.typography.fontWeightBold}}>
+              <Typography variant="h5" noWrap sx={{fontWeight:theme.typography.fontWeightBold}}>
               New user registered
               </Typography>
               <Typography variant="caption" noWrap>
@@ -93,7 +93,7 @@ const NotificationMenu = () => {
                 alignItems: "flex-start",
               }}
             >
-              <Typography variant="h6" noWrap sx={{fontWeight:theme.typography.fontWeightBold}}>
+              <Typography variant="h5" noWrap sx={{fontWeight:theme.typography.fontWeightBold}}>
                 New message received
               </Typography>
               <Typography variant="caption" noWrap>
@@ -110,7 +110,7 @@ const NotificationMenu = () => {
         <Divider />
         <Box sx={{p:1 }}>
             <Button variant="contained" color="info" sx={{backgroundColor:theme.palette.login.main, color:'#fff',width:'100%'}}>
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h5" color="inherit">
                 CONNECT NOW
                 </Typography>
             </Button>

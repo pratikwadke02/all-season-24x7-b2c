@@ -17,7 +17,7 @@ const CheckboxComponent = (props) => {
     <>
     <FormControl sx={{ml:1 }} component="fieldset" variant="standard">
         <FormLabel component="legend">
-          <Typography variant="h7" sx={{color:theme.palette.text.primary, fontWeight:theme.typography.fontWeightBold}}>{props.formLabel}</Typography>
+          <Typography variant="h5" sx={{color:theme.palette.text.primary, fontWeight:theme.typography.fontWeightBold}}>{props.formLabel}</Typography>
           </FormLabel>
         <FormGroup>
           <FormControlLabel
@@ -28,7 +28,7 @@ const CheckboxComponent = (props) => {
             //   name="gilad" 
               />
             }
-            label={<Typography variant="h6" >{props.optionA}</Typography>}
+            label={<Typography variant="h5" >{props.optionA}</Typography>}
           />
           <FormControlLabel
             control={
@@ -38,7 +38,7 @@ const CheckboxComponent = (props) => {
             //   name="jason" 
               />
             }
-            label={<Typography variant="h6" >{props.optionB}</Typography>}
+            label={<Typography variant="h5" >{props.optionB}</Typography>}
           />
           <FormControlLabel
             control={
@@ -48,7 +48,7 @@ const CheckboxComponent = (props) => {
             //   name="antoine" 
               />
             }
-            label={<Typography variant="h6" >{props.optionC}</Typography>}
+            label={<Typography variant="h5" >{props.optionC}</Typography>}
           />
           <FormControlLabel
             control={
@@ -58,7 +58,7 @@ const CheckboxComponent = (props) => {
             //   name="antoine" 
               />
             }
-            label={<Typography variant="h6" >{props.optionD}</Typography>}
+            label={<Typography variant="h5" >{props.optionD}</Typography>}
           />
         </FormGroup>
       </FormControl>

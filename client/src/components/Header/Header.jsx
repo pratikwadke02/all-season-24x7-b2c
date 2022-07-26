@@ -101,14 +101,14 @@ const Header = () => {
                 backgroundColor: theme.palette.background.default,
               }}
             >
-              <IconButton>
+              {/* <IconButton>
                 <ViewModuleIcon fontSize="large" />
               </IconButton>
             </Box>
             <Box sx={{ backgroundColor: theme.palette.background.disabled }}>
               <IconButton>
                 <TableRowsIcon fontSize="large" />
-              </IconButton>
+              </IconButton> */}
             </Box>
           </Box>
           <Box flex={0}>
@@ -119,7 +119,7 @@ const Header = () => {
             onClick={handleDrawerToggle}
           >
             <FilterListOutlinedIcon color="primary" fontSize="large" />
-            <label style={{ color: theme.palette.primary.main }}>FILTERS</label>
+            <label style={{ color: theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold, fontSize:theme.typography.h5 }}>FILTERS</label>
           </IconButton>
         </Box>
       </Container>

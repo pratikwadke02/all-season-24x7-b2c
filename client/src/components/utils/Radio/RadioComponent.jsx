@@ -14,7 +14,7 @@ const RadioComponent = (props) => {
     <FormControl sx={{ m: 1, width: 300 }}>
       <FormLabel id="demo-radio-buttons-group-label">
         <Typography
-          variant="h7"
+          variant="h5"
           sx={{
             color: theme.palette.text.primary,
             fontWeight: theme.typography.fontWeightBold,
@@ -31,17 +31,17 @@ const RadioComponent = (props) => {
         <FormControlLabel
           value={props.optionA}
           control={<Radio />}
-          label={<Typography variant="h6">{props.optionA}</Typography>}
+          label={<Typography variant="h5">{props.optionA}</Typography>}
         />
         <FormControlLabel
           value={props.optionB}
           control={<Radio />}
-          label={<Typography variant="h6">{props.optionB}</Typography>}
+          label={<Typography variant="h5">{props.optionB}</Typography>}
         />
         <FormControlLabel
           value={PaymentResponse.optionC}
           control={<Radio />}
-          label={<Typography variant="h6">{props.optionC}</Typography>}
+          label={<Typography variant="h5">{props.optionC}</Typography>}
         />
       </RadioGroup>
     </FormControl>

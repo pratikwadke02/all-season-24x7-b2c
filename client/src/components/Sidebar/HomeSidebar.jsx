@@ -6,6 +6,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import RadioComponent from "../utils/Radio/RadioComponent";
 import SearchWithIcon from "../utils/Search/SearchWithIcon";
+import { theme } from "../../theme";
 
 const HomeSidebar = () => {
   const searchIcon = <SearchOutlinedIcon />;                              //Icons for the search bar
@@ -39,12 +40,11 @@ const HomeSidebar = () => {
             sx={{
               minWidth: 320,
               width: "100%",
-              minHeight: 42,
               color: "#ffffff",
               backgroundColor: "#2196f3",
             }}
           >
-            <Typography variant="h5">Search</Typography>
+            <Typography variant="h5" sx={{fontWeight:theme.typogra}}>Search</Typography>
           </Button>
         </Box>
         <Box sx={{ p: 1 }}>

@@ -72,8 +72,8 @@ const Navbar = () => {
     <CssBaseline />
     <AppBar elevation={0} position="static" sx={{position:'relative' ,zIndex:(theme) => theme.zIndex.drawer + 1, borderBottom:'1px solid'+theme.palette.text.secondary }}>  
       <Container maxWidth="xl">                                     
-        <Toolbar disableGutters>                                 
-          <img src={images.HomeLogo} alt="" />
+        <Toolbar disableGutters>
+            <img src={images.HomeLogo} alt="" />
           <Typography
             variant="h5"
             noWrap
@@ -105,13 +105,10 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ 
                   my: 2,
-                  color:theme.palette.text.primary ,
-                  fontSize: "14px", 
-                  display: "block",
-                  fontWeight: theme.typography.fontWeightBold, 
+                  color:theme.palette.text.primary , 
                 }}
               >
-                {page}
+                <Typography variant="h5" sx={{fontWeight:theme.typography.fontWeightBold}}>{page}</Typography>
               </Button>
             ))}
           </Box>
@@ -213,15 +210,14 @@ const Navbar = () => {
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", ml: 2 }}>
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               component="a"
               // href="/"
               sx={{
                 mr: 1,
                 display: { xs: "none", lg: "flex" },
-                fontSize: "1rem",
-                fontWeight: 700,
+                fontWeight: theme.typography.fontWeightBold,
                 color:theme.palette.text.primary ,
                 textDecoration: "none",
               }}
