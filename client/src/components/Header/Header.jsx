@@ -14,10 +14,27 @@ import DropdownComponent from "../utils/Dropdown/DropdownComponent";
 import Rightbar from "../Rightbar/Rightbar";
 import Drawer from "@mui/material/Drawer";
 import { theme } from "../../theme";
+import SelectComponent from "../utils/Dropdown/SelectComponent";
 
 const drawerWidth = 340; //defined drawer width here as it is not defined in the theme file and it is working on mobile view
 
 const Header = () => {
+
+  const items = [
+    {
+      value: "en",
+      name: "English",
+    },
+    { 
+      value: "es", 
+      name: "Spanish" 
+    },
+    { 
+      value: "fr", 
+      name: "French" 
+    },
+  ];
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -38,7 +55,7 @@ const Header = () => {
     <>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, }}
         aria-label="mailbox folders"
       >
         <Drawer
@@ -73,17 +90,22 @@ const Header = () => {
       </Box>
       <Container
         sx={{
+          height: {xs: 'fit-content', md: '80px'},
+          mt:2,
+          mb:2.5,
+          backgroundColor: theme.palette.background.default,
+          borderRadius: "4px",
           p: 3,
-          borderBottom: "1px solid lightgrey",
+          boxShadow: 1,
           display: "flex",
-          alignItems: { xs: "flex-start", sm: "center" },
+          alignItems: { xs: "center", sm: "center" },
           flexDirection: { xs: "column", sm: "row" },
         }}
       >
         <Typography
           flex={1}
           variant="h1"
-          sx={{ fontWeight: theme.typography.fontWeightBold }}
+          sx={{ fontWeight: theme.typography.fontWeightBold, mb:{xs:1, sm:0} }}
         >
           Latest Jobs
         </Typography>
@@ -111,8 +133,9 @@ const Header = () => {
               </IconButton> */}
             </Box>
           </Box>
-          <Box flex={0}>
-            <DropdownComponent label="Sort" />                 
+          <Box flex={0} sx={{minWidth:'150px', mr:4}}>
+            {/* <DropdownComponent label="Sort" />                  */}
+            <SelectComponent label="Sort" items={items} />
           </Box>
           <IconButton
             sx={{ alignItems: "center", display: { xs: "flex", sm: "none" } }}

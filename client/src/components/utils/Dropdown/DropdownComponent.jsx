@@ -13,7 +13,7 @@ const DropdownComponent = (props) => {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+      <FormControl sx={{ m: 1, minWidth: 150 }}>
         <InputLabel id="demo-simple-select-autowidth-label">{props.label}</InputLabel>
         <Select
           labelId="demo-simple-select-autowidth-label"

@@ -14,7 +14,7 @@ const HomeSidebar = () => {
 
   return (
     <>
-      <Box flex={3} p={1} sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box flex={2} p={1} sx={{ display: { xs: "none", sm: "block" }, backgroundColor:theme.palette.background.default,mr:3.3, mt:2,mb:9.5, borderRadius:'4px', boxShadow:2 , p:2, height:'fit-content'}}>
         <Box sx={{ p: 1 }}>
           <SearchWithIcon                                        //Search bar with icons and label components
             label="Search by title"
@@ -44,7 +44,7 @@ const HomeSidebar = () => {
               backgroundColor: "#2196f3",
             }}
           >
-            <Typography variant="h5" sx={{fontWeight:theme.typogra}}>Search</Typography>
+            <Typography variant="h4" sx={{fontWeight:theme.typography.fontWeightMedium}}>Search</Typography>
           </Button>
         </Box>
         <Box sx={{ p: 1 }}>

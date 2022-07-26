@@ -81,7 +81,7 @@ const Navbar = () => {
             href=""
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "flex", lg: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
@@ -94,9 +94,11 @@ const Navbar = () => {
             sx={{
               flexGrow: 1,
               justifyContent: "space-evenly",
-              marginLeft: 20,
-              marginRight: 20,
-              display: { xs: "none", md: "flex" },
+              // marginLeft: 30,
+              // marginRight: 30,
+              pl:30,
+              pr:30,
+              display: { xs: "none", lg: "flex" },
             }}
           >
             {pages.map((page) => (
@@ -115,7 +117,7 @@ const Navbar = () => {
 
           <Box sx={{ flexGrow: 0, display: "flex" }}>
             <Tooltip title="Open Notifications">
-            <IconButton onClick={handleOpenNotificationsMenu} sx={{mr:1}}>
+            <IconButton onClick={handleOpenNotificationsMenu} sx={{mr:2}}>
               <NotificationsNoneRoundedIcon fontSize="large"  />
             </IconButton>
             </Tooltip>
@@ -141,7 +143,7 @@ const Navbar = () => {
             <Tooltip title="Open settings">
               <IconButton
                 onClick={handleOpenUserMenu}
-                sx={{ p: 0, display: { xs: "none", sm: "block" } }}
+                sx={{ p: 0, display: { xs: "none", lg: "block" } }}
               >
               <StyledBadge
               overlap="circular"
@@ -172,7 +174,7 @@ const Navbar = () => {
                 <ProfileMenu />                                    
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 0, display: { xs: "flex", lg: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"

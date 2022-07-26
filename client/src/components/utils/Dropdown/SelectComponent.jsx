@@ -9,18 +9,18 @@ const SelectComponent = (props) => {
         setValue(event.target.value);
     }
 
-    const {items} = props;
+    const {items, label} = props;
 
   return (
     <>
     <Box>
     <FormControl sx={{width:'100%'}}>
-        <InputLabel id='select-label'>Contract Type</InputLabel>
+        <InputLabel id='select-label'>{label}</InputLabel>
             <Select
               labelId = 'select-label'
               value={value}
               onChange={handleChange}
-              input={<OutlinedInput id="select" label="Contract Type" />}
+              input={<OutlinedInput id="select" label={label} />}
               inputProps={{ "aria-label": "Without label" }}
             >
                 {items.map((item) => (
