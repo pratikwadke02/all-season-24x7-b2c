@@ -91,6 +91,7 @@ const Header = () => {
       <Container
         sx={{
           height: {xs: 'fit-content', md: '80px'},
+          // m: {xs:'2', lg:'none'},
           mt:2,
           mb:2.5,
           backgroundColor: theme.palette.background.default,
@@ -105,7 +106,7 @@ const Header = () => {
         <Typography
           flex={1}
           variant="h1"
-          sx={{ fontWeight: theme.typography.fontWeightBold, mb:{xs:1, sm:0} }}
+          sx={{ fontWeight: theme.typography.fontWeightBold, mb:{xs:2, sm:0} }}
         >
           Latest Jobs
         </Typography>
@@ -133,7 +134,7 @@ const Header = () => {
               </IconButton> */}
             </Box>
           </Box>
-          <Box flex={0} sx={{minWidth:'150px', mr:4}}>
+          <Box flex={0} sx={{minWidth:'150px', mr:{xs:4, sm:0}}}>
             {/* <DropdownComponent label="Sort" />                  */}
             <SelectComponent label="Sort" items={items} />
           </Box>
