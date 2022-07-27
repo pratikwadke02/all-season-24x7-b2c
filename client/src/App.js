@@ -3,6 +3,7 @@ import Home from "./views/Home/Home";
 import Auth from "./views/Auth/Auth";
 import { theme } from "./theme";
 import Application from "./views/Application/Application";
+import Bookmark from "./views/Bookmark/Bookmark";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       {/* <Home /> */}
       {/* <Auth /> */}
       <Application />
+      {/* <Bookmark /> */}
     </ThemeProvider>
     </>
   );

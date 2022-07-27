@@ -51,17 +51,17 @@ export default function CardComponent() {
       </CardContent>
       <CardActions sx={{display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
         <Box>
-        <Button color="inherit" sx={{backgroundColor:'#f6fafd' ,color:theme.palette.primary.main , fontSize: theme.typography.h5, fontWeight:theme.typography.fontWeightBold, ml:1, mr:1}}>
+        {/* <Button color="inherit" sx={{backgroundColor:'#f6fafd' ,color:theme.palette.primary.main , fontSize: theme.typography.h5, fontWeight:theme.typography.fontWeightBold, ml:1, mr:1}}>
             Apply
-        </Button>
+        </Button> */}
         <Button variant="conatined" color="primary" sx={{color: '#2196f3', fontSize: theme.typography.h5, fontWeight:theme.typography.fontWeightBold}} startIcon={<RemoveRedEyeIcon />}>
             WATCH
         </Button>
         </Box>
         <Box sx={{right:0}}>
-        <IconButton aria-label="bookmark">
+        {/* <IconButton aria-label="bookmark">
           <BookmarkBorderIcon fontSize='medium'/>
-        </IconButton>
+        </IconButton> */}
         </Box>
       </CardActions>
     </Card>

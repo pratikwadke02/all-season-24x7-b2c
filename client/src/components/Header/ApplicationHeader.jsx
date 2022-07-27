@@ -2,6 +2,7 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
 import SelectComponent from "../utils/Dropdown/SelectComponent";
+import Date from "../utils/Date/Date";
 
 const ApplicationHeader = () => {
   const jobProfileItems = [
@@ -41,7 +42,8 @@ const ApplicationHeader = () => {
             </Box>
             <Box sx={{p:1.25}}/>
             <Box sx={{width:'100%'}}>
-            <SelectComponent label="Select Date" items={jobProfileItems} />
+            {/* <SelectComponent label="Select Date" items={jobProfileItems} /> */}
+            <Date label="Select Date" />
             </Box>
             <Box sx={{p:1.25}}/>
             <Box sx={{width:'100%'}}>
