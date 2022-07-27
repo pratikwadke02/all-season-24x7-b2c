@@ -56,7 +56,7 @@ const Account = () => {
                 color="info"
                 sx={{
                   width: '260px',
-                  backgroundColor: theme.palette.secondary.main,
+                  backgroundColor: theme.palette.primary.main,
                   
                 }}
               >
@@ -149,7 +149,7 @@ const Account = () => {
             sx={{
               width: "100%",
               maxWidth: "200px",
-              backgroundColor: theme.palette.secondary.main,
+              backgroundColor: theme.palette.primary.main,
             }}
           >
             <Typography variant="h5" sx={{fontWeight: theme.typography.fontWeightBold}}>SAVE CHANGES</Typography>

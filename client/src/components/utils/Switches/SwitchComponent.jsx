@@ -19,13 +19,13 @@ export default function SwitchComponent(props) {
 
   const PurpleSwitch = styled(Switch)(({ theme }) => ({
     '& .MuiSwitch-switchBase.Mui-checked': {
-      color: theme.palette.secondary.main,
+      color: theme.palette.primary.main,
       '&:hover': {
-        backgroundColor: alpha(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
+        backgroundColor: alpha(theme.palette.primary.main, theme.palette.action.hoverOpacity),
       },
     },
     '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-      backgroundColor: theme.palette.secondary.main,
+      backgroundColor: theme.palette.primary.main,
     },
   }));
 

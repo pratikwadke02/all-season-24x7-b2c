@@ -11,7 +11,7 @@ export const theme = createTheme({
       main: "#9155fd", //for buttons
       dark: "#9257fd", //for hover buttons
       light: "#c4a4fe", //for hover buttons  and text background
-      hover: "#ede7f6", //for text
+      hover: "#e6edfe", //for text
       bg: "#f4f5fa", //for background
     },
     text: {

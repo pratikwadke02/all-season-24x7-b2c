@@ -80,7 +80,7 @@ const Info = () => {
             <FormControl sx={{}}>
               <FormLabel
                 id="demo-row-radio-buttons-group-label"
-                color="secondary"
+                color="primary"
                 sx={{
                   fontSize: theme.typography.h5,
                   fontWeight: theme.typography.fontWeightMedium,
@@ -95,17 +95,17 @@ const Info = () => {
               >
                 <FormControlLabel
                   value="female"
-                  control={<Radio color="secondary" />}
+                  control={<Radio color="primary" />}
                   label="Female"
                 />
                 <FormControlLabel
                   value="male"
-                  control={<Radio color="secondary" />}
+                  control={<Radio color="primary" />}
                   label="Male"
                 />
                 <FormControlLabel
                   value="other"
-                  control={<Radio color="secondary" />}
+                  control={<Radio color="primary" />}
                   label="Other"
                 />
               </RadioGroup>
@@ -115,11 +115,11 @@ const Info = () => {
         <Box sx={{ mt: 1 }}>
           <Button
             variant="contained"
-            color="info"
+            color="primary"
             sx={{
               width: "100%",
               maxWidth: "200px",
-              backgroundColor: theme.palette.secondary.main,
+              backgroundColor: theme.palette.primary.main,
             }}
           >
             <Typography variant="h5" sx={{fontWeight: theme.typography.fontWeightBold}}>SAVE CHANGES</Typography>

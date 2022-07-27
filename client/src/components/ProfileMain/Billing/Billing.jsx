@@ -27,12 +27,12 @@ const Billing = () => {
             <RadioGroup row>
               <FormControlLabel
                 value="credit"
-                control={<Radio color="secondary" />}
+                control={<Radio color="primary" />}
                 label="Credit/Debit/ATM Card"
               />
               <FormControlLabel
                 value="debit"
-                control={<Radio color="secondary" />}
+                control={<Radio color="primary" />}
                 label="COD/Cheque"
               />
             </RadioGroup>
@@ -52,11 +52,11 @@ const Billing = () => {
           <Box sx={{}}>
             <Button
               variant="contained"
-              color="info"
+              color="primary"
               sx={{
                 width: "100%",
                 maxWidth: "200px",
-                backgroundColor: theme.palette.secondary.main,
+                backgroundColor: theme.palette.primary.main,
               }}
             >
               <Typography variant="h5" sx={{fontWeight: theme.typography.fontWeightBold}}>SAVE CHANGES</Typography>
@@ -94,8 +94,8 @@ const Billing = () => {
             variant="h6"
             sx={{
               mt: 2,
-              color: theme.palette.secondary.main,
-              backgroundColor: "#f2ebff",
+              color: theme.palette.primary.main,
+              backgroundColor: theme.palette.secondary.hover,
               width: "80px",
               height: "20px",
               borderRadius: "40px",
@@ -107,7 +107,7 @@ const Billing = () => {
           <Box sx={{ mt: 2, mb: 1, display: "flex", alignItems: "center" }}>
             <PersonOutlineOutlinedIcon
               fontSize="large"
-              sx={{ color: theme.palette.text.primary }}
+              sx={{ color: theme.palette.text.primary, mr:2 }}
             />
             <Typography variant="h5" color={theme.palette.text.disabled}>
               5 Users
@@ -116,7 +116,7 @@ const Billing = () => {
           <Box sx={{ mt: 1, mb: 1, display: "flex", alignItems: "center" }}>
             <CloudOutlinedIcon
               fontSize="large"
-              sx={{ color: theme.palette.text.primary }}
+              sx={{ color: theme.palette.text.primary, mr:2 }}
             />
             <Typography variant="h5" color={theme.palette.text.disabled}>
               10 GB Storage
@@ -125,16 +125,16 @@ const Billing = () => {
           <Box sx={{ mt: 1, mb: 2, display: "flex", alignItems: "center" }}>
             <HelpOutlineOutlinedIcon
               fontSize="large"
-              sx={{ color: theme.palette.text.primary }}
+              sx={{ color: theme.palette.text.primary, mr:2 }}
             />
             <Typography variant="h5" color={theme.palette.text.disabled}>
               Basic Support
             </Typography>
           </Box>
           <Button
-            color="info"
+            color="primary"
             variant="contained"
-            sx={{ backgroundColor: theme.palette.secondary.main }}
+            sx={{ backgroundColor: theme.palette.primary.main }}
           >
             <Typography variant="h5" sx={{fontWeight: theme.typography.fontWeightBold}}>Save Changes</Typography>
           </Button>

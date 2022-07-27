@@ -54,8 +54,8 @@ export default function TabComponent(props) {
     }}>
       <Box sx={{ borderBottom:1, borderColor:'divider', mb: 2}}>
         <Tabs
-          textColor="secondary"
-          indicatorColor="secondary"
+          textColor="primary"
+          indicatorColor="primary"
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"

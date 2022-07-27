@@ -35,12 +35,12 @@ const Notification = () => {
         </Box>
         <Box sx={{ m: 2 }}>
           <Button
-            color="info"
+            color="primary"
             variant="contained"
             sx={{
               width: "100%",
               maxWidth: "200px",
-              backgroundColor: theme.palette.secondary.main,
+              backgroundColor: theme.palette.primary.main,
             }}
           >
             <Typography variant="h5" sx={{fontWeight: theme.typography.fontWeightBold}}>SAVE CHANGES</Typography>

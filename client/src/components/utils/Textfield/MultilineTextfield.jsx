@@ -4,17 +4,17 @@ import { theme } from "../../../theme";
 
 const BorderMultilineTextField = styled(TextField)({
   "& label.Mui-focused": {
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.main,
   },
   "& .Mui-underline:after": {
-    borderBottomColor: theme.palette.secondary.main,
+    borderBottomColor: theme.palette.primary.main,
   },
   "& .MuiOutlinedInput-root": {
     "&:hover fieldset": {
-      borderColor: theme.palette.secondary.main,
+      borderColor: '#000',
     },
     "&.Mui-focused fieldset": {
-      borderColor: theme.palette.secondary.main,
+      borderColor: theme.palette.primary.main,
     },
   },
 });

@@ -7,7 +7,7 @@ import Date from '../utils/Date/Date'
 const ProfileHeader = () => {
   return (
     <>
-      <Container sx={{ backgroundColor: theme.palette.background.default, width:'100%', boxShadow: 1, borderRadius:'4px', mt:4, p:2, mb:2}}>
+      <Container sx={{ backgroundColor: theme.palette.background.default, width:'100%', boxShadow: 1, borderRadius:'4px', mt:3, p:2, mb:3}}>
         <Box
           sx={{
             display: "flex",
