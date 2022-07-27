@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import {theme} from '../../../theme';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -51,7 +52,7 @@ export default function TabComponent(props) {
     <Box sx={{
       width: "100%",
     }}>
-      <Box sx={{ borderBottom:1, borderColor:'divider'}}>
+      <Box sx={{ borderBottom:1, borderColor:'divider', mb: 2}}>
         <Tabs
           textColor="secondary"
           indicatorColor="secondary"
@@ -66,7 +67,7 @@ export default function TabComponent(props) {
               icon={item.icon} 
               iconPosition="start"
               {...a11yProps(index)} 
-              sx={{fontSize: "14px"}} />
+              sx={{fontSize:theme.typography.h3, mr:3}} />
           ))}
         </Tabs>
       </Box>

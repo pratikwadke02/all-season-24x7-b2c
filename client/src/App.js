@@ -4,6 +4,7 @@ import Auth from "./views/Auth/Auth";
 import { theme } from "./theme";
 import Application from "./views/Application/Application";
 import Bookmark from "./views/Bookmark/Bookmark";
+import Profile from "./views/Profile/Profile";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
     <ThemeProvider theme = {theme}>
       {/* <Home /> */}
       {/* <Auth /> */}
-      <Application />
+      {/* <Application /> */}
       {/* <Bookmark /> */}
+      <Profile />
     </ThemeProvider>
     </>
   );
