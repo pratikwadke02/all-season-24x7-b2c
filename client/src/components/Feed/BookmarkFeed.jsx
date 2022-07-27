@@ -1,12 +1,12 @@
 import { Box } from "@mui/system";
 import React from "react";
-import ApplicationCard from "../utils/Card/ApplicationCard";
+import BookmarkCard from "../utils/Card/BookmarkCard";
 import PaginationComponent from "../utils/Pagination/PaginationComponent";
 
-const Feed = () => {
+const BookmarkFeed = () => {
   return (
     <>
-      <Box                       // This is the main container for the feed component
+    <Box                       // This is the main container for the feed component
         // flex={7}
         sx={{
           display: "flex",
@@ -18,19 +18,19 @@ const Feed = () => {
         }}
       >
         <Box sx={{display:'flex', flexDirection:{xs:'column', sm:'row'}, justifyContent:'space-between', alignItems:'center'}}>
-            <ApplicationCard />
+            <BookmarkCard />
             <Box sx={{m:2}} />
-            <ApplicationCard />
+            <BookmarkCard />
         </Box>
         <Box sx={{display:'flex', flexDirection:{xs:'column', sm:'row'}, justifyContent:'space-between', alignItems:'center'}}>
-            <ApplicationCard />
+            <BookmarkCard />
             <Box sx={{m:2}} />
-            <ApplicationCard />
+            <BookmarkCard />
         </Box>
         <Box sx={{display:'flex', flexDirection:{xs:'column', sm:'row'}, justifyContent:'space-between', alignItems:'center'}}>
-            <ApplicationCard />
+            <BookmarkCard />
             <Box sx={{m:2}} />
-            <ApplicationCard />
+            <BookmarkCard />
         </Box>
         <Box
           sx={{margin:'auto', alignItems: "center", position: "relative", bottom: 0 }}
@@ -39,7 +39,7 @@ const Feed = () => {
         </Box>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Feed;
+export default BookmarkFeed
