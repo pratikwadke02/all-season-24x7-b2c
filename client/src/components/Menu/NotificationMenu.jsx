@@ -135,7 +135,7 @@ const NotificationMenu = () => {
             </Typography>
           </Box>
         </Box>
-        <Divider />
+        {/* <Divider />
         <Box sx={{ p: 1 }}>
           <Button
             variant="contained"
@@ -151,7 +151,7 @@ const NotificationMenu = () => {
               CONNECT NOW
             </Typography>
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </>
   );

@@ -148,7 +148,7 @@ const Navbar = () => {
             </Tooltip>
             <Menu
             PaperProps={{ sx: { width: "100%" , maxWidth:'380px', backgroundColor:theme.palette.background.paper } }}
-            sx={{ mt: "45px", width:'380px' }}
+            sx={{ mt: "45px", width:{xs:'300px' , sm:'380px'} }}
             id="notification-appbar"
             anchorEl={anchorElNotifications}
             anchorOrigin={{
