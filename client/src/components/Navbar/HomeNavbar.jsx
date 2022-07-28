@@ -147,7 +147,7 @@ const Navbar = () => {
             </IconButton>
             </Tooltip>
             <Menu
-            PaperProps={{ sx: { width: "100%" , maxWidth:'380px' } }}
+            PaperProps={{ sx: { width: "100%" , maxWidth:'380px', backgroundColor:theme.palette.background.paper } }}
             sx={{ mt: "45px", width:'380px' }}
             id="notification-appbar"
             anchorEl={anchorElNotifications}
@@ -180,7 +180,7 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'330px', p:0, m: 0, backgroundColor:theme.palette.background.default} }}
+              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'330px', p:0, m: 0, backgroundColor:theme.palette.background.paper} }}
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -210,7 +210,10 @@ const Navbar = () => {
             >
               <MenuIcon color="primary" fontSize="large"/>                       
             </IconButton>
-            <Menu                                                      // Menu component is used to display the navbar menu in the navbar when the menu button is clicked in mobile view
+            <Menu  
+              PaperProps={{ sx:{
+                backgroundColor:theme.palette.background.paper,
+              }}}                                                    // Menu component is used to display the navbar menu in the navbar when the menu button is clicked in mobile view
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -225,13 +228,13 @@ const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", lg: "none" },
               }}
             >
               {pages.map((page) => (
-                <Link to={page.link} key={page.name} style={{textDecoration:'none'}}>
+                <Link to={page.link} key={page.name} style={{textDecoration:'none', color:theme.palette.text.primary}}>
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
+                  <Typography variant="h5" textAlign="center">{page.name}</Typography>
                 </MenuItem>
                 </Link>
               ))}

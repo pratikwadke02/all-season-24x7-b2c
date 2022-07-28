@@ -13,6 +13,7 @@ import {theme} from '../../../theme';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import ShareIcon from '@mui/icons-material/Share';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import StarOutline from '@mui/icons-material/StarOutline';
 
 export default function CardComponent() {
 
@@ -59,8 +60,8 @@ export default function CardComponent() {
         </Button>
         </Box>
         <Box sx={{right:0}}>
-        <IconButton aria-label="bookmark">
-          <BookmarkBorderIcon fontSize='medium'/>
+        <IconButton aria-label="bookmark" sx={{backgroundColor:'#f6fafd'}}>
+          <StarOutline fontSize='large' sx={{color:theme.palette.primary.main}}/>
         </IconButton>
         </Box>
       </CardActions>

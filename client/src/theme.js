@@ -12,7 +12,7 @@ export const theme = createTheme({
       dark: "#9257fd", //for hover buttons
       light: "#c4a4fe", //for hover buttons  and text background
       hover: "#e6edfe", //for text
-      bg: "#f4f5fa", //for background
+      bg: "#fff", //for background
     },
     text: {
       primary: "#544f5a", //for header and text

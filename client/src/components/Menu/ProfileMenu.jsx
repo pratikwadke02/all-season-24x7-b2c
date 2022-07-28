@@ -3,6 +3,7 @@ import Badge from "@mui/material/Badge";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import {
   MenuItem,
   IconButton,
@@ -108,7 +109,7 @@ const ProfileMenu = () => {
       <Link to="/favorites" style={{textDecoration:'none'}}>
       <MenuItem sx={{ maxHeight: "40px" }}>
         <IconButton>
-          <PermIdentityOutlinedIcon fontSize="medium" />
+          <StarOutlineIcon fontSize="medium" />
           <Typography variant="h5" noWrap sx={{ pl: 1 }}>
             Favourites
           </Typography>
