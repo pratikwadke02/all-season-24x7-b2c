@@ -12,6 +12,7 @@ import { theme } from "../../theme";
 import CloseIcon from "@mui/icons-material/Close";
 import GoogleIcon from "@mui/icons-material/Google";
 import TextfieldComponent from "../utils/Textfield/TextfieldComponent";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [checked, setChecked] = React.useState(false);
@@ -90,7 +91,7 @@ const Signup = () => {
                 sx={{ m: -1 }}
               />
               <Box sx={{ maxWidth: 400 }}>
-                <Typography variant="h7" color={theme.palette.text.primary}>
+                <Typography variant="h5" color={theme.palette.text.primary}>
                   I agree to All Season 24x7's{" "}
                   <a
                     style={{
@@ -126,7 +127,7 @@ const Signup = () => {
               mt: 2,
             }}
           >
-            <Typography variant="h6">Create account</Typography>
+            <Typography variant="h4">Create account</Typography>
           </Button>
         </Box>
         <Divider
@@ -137,7 +138,7 @@ const Signup = () => {
           }}
         >
           <Typography
-            variant="h2"
+            variant="h3"
             color={theme.palette.text.primary}
             sx={{ mb: "-.95rem" }}
           >
@@ -151,7 +152,7 @@ const Signup = () => {
             sx={{ width: "100%", minHeight: 47, mt: 2, mb: 1 }}
           >
             <Typography
-              variant="h6"
+              variant="h4"
               color={theme.palette.text.primary}
               sx={{ display: "flex", alignItems: "center" }}
             >
@@ -165,19 +166,21 @@ const Signup = () => {
           {/* <Divider sx={{ width: "100%", mt: 2, mb: 2 }} /> */}
           <Box sx={{ display: "flex" }}>
             <Typography
-              variant="h6"
+              variant="h5"
               color={theme.palette.text.disabled}
               sx={{ pr: 1 }}
             >
               Already have an account?
             </Typography>
+            <Link to="/login" style={{textDecoration:'none'}}>
             <Typography
-              variant="h6"
+              variant="h5"
               color={theme.palette.text.primary}
               sx={{ color: theme.palette.login.main }}
             >
               Login
             </Typography>
+            </Link>
           </Box>
         </Box>
       </Container>

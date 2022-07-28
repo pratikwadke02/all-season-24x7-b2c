@@ -6,6 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import GoogleIcon from "@mui/icons-material/Google";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneComponent from "../utils/Phone/PhoneComponent";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -61,7 +62,7 @@ const Login = () => {
               mt: 2,
             }}
           >
-            <Typography variant="h6">Send One Time Password</Typography>
+            <Typography variant="h4">Send One Time Password</Typography>
           </Button>
         </Box>
         <Divider
@@ -72,7 +73,7 @@ const Login = () => {
           }}
         >
           <Typography
-            variant="h2"
+            variant="h3"
             color={theme.palette.text.primary}
             sx={{ mb: "-.95rem" }}
           >
@@ -86,7 +87,7 @@ const Login = () => {
             sx={{ width: "100%", minHeight: 47, mt: 2, mb: 1 }}
           >
             <Typography
-              variant="h6"
+              variant="h4"
               color={theme.palette.text.primary}
               sx={{ display: "flex", alignItems: "center" }}
             >
@@ -103,7 +104,7 @@ const Login = () => {
             sx={{ width: "100%",  minHeight: 47, mt: 2, mb: 1 }}
           >
             <Typography
-              variant="h6"
+              variant="h4"
               color={theme.palette.text.primary}
               sx={{ display: "flex", alignItems: "center" }}
             >
@@ -117,19 +118,21 @@ const Login = () => {
           <Divider sx={{ width: "100%", mt: 2, mb: 2,}} />
           <Box sx={{ display: "flex", }}>
             <Typography
-              variant="h6"
+              variant="h5"
               color={theme.palette.text.disabled}
               sx={{ pr: 1 }}
             >
               New to All Season24x7?
             </Typography>
+            <Link to="/signup" style={{textDecoration:'none'}}>
             <Typography
-              variant="h6"
+              variant="h5"
               color={theme.palette.text.primary}
-              sx={{ color: theme.palette.login.main }}
+              sx={{ color: theme.palette.login.main, textDecoration: "none" }}
             >
               Create account
             </Typography>
+            </Link>
           </Box>
         </Box>
       </Container>

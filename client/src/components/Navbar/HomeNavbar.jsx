@@ -7,8 +7,31 @@ import { useState } from "react";
 import { theme } from "../../theme";
 import ProfileMenu from "../Menu/ProfileMenu";
 import NotificationMenu from "../Menu/NotificationMenu";
+import {Link} from "react-router-dom";
 
-const pages = ["Home", "Updates", "Services", "Features", "About"];              // pages to be displayed in the navbar menu
+const pages = [
+  // "Home", "Updates", "Services", "Features", "About"
+  {
+    name: "Home",
+    link: "/all-season-24x7-b2c",
+  },
+  {
+    name: "Updates",
+    link: "/all-season-24x7-b2c",
+  },
+  {
+    name: "Services",
+    link: "/all-season-24x7-b2c",
+  },
+  {
+    name: "Features",
+    link: "/all-season-24x7-b2c",
+  },
+  {
+    name: "About",
+    link: "/all-season-24x7-b2c",
+  },
+];              // pages to be displayed in the navbar menu
 
 const StyledBadge = styled(Badge)(({ theme }) => ({                               // StyledBadge component to display the number of unread notifications in the navbar
   '& .MuiBadge-badge': {
@@ -102,6 +125,7 @@ const Navbar = () => {
             }}
           >
             {pages.map((page) => (
+              <Link to={page.link} key={page.name} style={{textDecoration:'none'}}>
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -110,8 +134,9 @@ const Navbar = () => {
                   color:theme.palette.text.primary , 
                 }}
               >
-                <Typography variant="h5" sx={{fontWeight:theme.typography.fontWeightBold}}>{page}</Typography>
+                <Typography variant="h5" sx={{fontWeight:theme.typography.fontWeightBold}}>{page.name}</Typography>
               </Button>
+              </Link>
             ))}
           </Box>
 
@@ -155,7 +180,7 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'220px', p:0, m: 0, backgroundColor:theme.palette.background.default} }}
+              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'330px', p:0, m: 0, backgroundColor:theme.palette.background.default} }}
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -204,9 +229,11 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
+                <Link to={page.link} key={page.name} style={{textDecoration:'none'}}>
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

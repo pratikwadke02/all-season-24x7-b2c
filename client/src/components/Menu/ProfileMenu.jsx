@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { theme } from "../../theme";
 import { images } from "../../constants";
+import { Link } from "react-router-dom";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -84,6 +85,7 @@ const ProfileMenu = () => {
         </IconButton>
       </MenuItem>
       {/* <Divider /> */}
+      <Link to ="/profile" style={{textDecoration:'none'}}>
       <MenuItem sx={{ maxHeight: "40px" }}>
         <IconButton>
           <PermIdentityOutlinedIcon fontSize="medium" />
@@ -92,6 +94,27 @@ const ProfileMenu = () => {
           </Typography>
         </IconButton>
       </MenuItem>
+      </Link>
+      <Link to="/application" style={{textDecoration:'none'}}>
+      <MenuItem sx={{ maxHeight: "40px" }}>
+        <IconButton>
+          <PermIdentityOutlinedIcon fontSize="medium" />
+          <Typography variant="h5" noWrap sx={{ pl: 1 }}>
+            Applications
+          </Typography>
+        </IconButton>
+      </MenuItem>
+      </Link>
+      <Link to="/favorites" style={{textDecoration:'none'}}>
+      <MenuItem sx={{ maxHeight: "40px" }}>
+        <IconButton>
+          <PermIdentityOutlinedIcon fontSize="medium" />
+          <Typography variant="h5" noWrap sx={{ pl: 1 }}>
+            Favourites
+          </Typography>
+        </IconButton>
+      </MenuItem>
+      </Link>
       <MenuItem>
         <IconButton>
           <HelpOutlineOutlinedIcon fontSize="medium" />
@@ -100,7 +123,16 @@ const ProfileMenu = () => {
           </Typography>
         </IconButton>
       </MenuItem>
+      <MenuItem sx={{ maxHeight: "40px" }}>
+        <IconButton>
+          <PermIdentityOutlinedIcon fontSize="medium" />
+          <Typography variant="h5" noWrap sx={{ pl: 1 }}>
+            Help & Support
+          </Typography>
+        </IconButton>
+      </MenuItem>
       {/* <Divider /> */}
+      <Link to="/login" style={{textDecoration:'none'}}>
       <MenuItem
         sx={{
           maxHeight: "40px",
@@ -108,13 +140,16 @@ const ProfileMenu = () => {
         }}
         dense="true"
       >
+      
         <IconButton>
           <LogoutOutlinedIcon fontSize="medium" />
           <Typography variant="h5" noWrap sx={{ pl: 1 }}>
             Logout
           </Typography>
         </IconButton>
+        
       </MenuItem>
+      </Link>
     </MenuList>
   );
 };
