@@ -31,7 +31,7 @@ const BookmarkHeader = () => {
               variant="h1"
               sx={{ fontWeight: theme.typography.fontWeightBold }}
             >
-              Search Bookmark
+              Search Favourites
             </Typography>
           </Box>
           <Box

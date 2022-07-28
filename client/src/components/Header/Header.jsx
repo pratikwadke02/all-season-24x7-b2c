@@ -92,7 +92,7 @@ const Header = () => {
         sx={{
           height: {xs: 'fit-content', md: '80px'},
           // m: {xs:'2', lg:'none'},
-          mt:2,
+          mt:4,
           mb:2.5,
           backgroundColor: theme.palette.background.default,
           borderRadius: "4px",

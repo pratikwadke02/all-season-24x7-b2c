@@ -41,10 +41,11 @@ const HomeSidebar = () => {
               minWidth: 320,
               width: "100%",
               color: "#ffffff",
-              backgroundColor: "#2196f3",
+              // backgroundColor: "#2196f3",
+              backgroundColor: theme.palette.primary.main,
             }}
           >
-            <Typography variant="h4" sx={{fontWeight:theme.typography.fontWeightMedium}}>Search</Typography>
+            <Typography variant="h4" sx={{fontWeight:theme.typography.fontWeightBold}}>Search</Typography>
           </Button>
         </Box>
         <Box sx={{ p: 1 }}>
