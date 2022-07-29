@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/all-season-24x7-b2c/static/js/main.fbc8a8f3.js",
+    "main.js": "/all-season-24x7-b2c/static/js/main.771a9c40.js",
     "index.html": "/all-season-24x7-b2c/index.html",
-    "main.fbc8a8f3.js.map": "/all-season-24x7-b2c/static/js/main.fbc8a8f3.js.map"
+    "main.771a9c40.js.map": "/all-season-24x7-b2c/static/js/main.771a9c40.js.map"
   },
   "entrypoints": [
-    "static/js/main.fbc8a8f3.js"
+    "static/js/main.771a9c40.js"
   ]
 }
