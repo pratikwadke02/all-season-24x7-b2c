@@ -142,8 +142,11 @@ const Header = () => {
             sx={{ alignItems: "center", display: { xs: "flex", sm: "none" } }}
             onClick={handleDrawerToggle}
           >
-            <FilterListOutlinedIcon color="primary" fontSize="large" />
-            <label style={{ color: theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold, fontSize:theme.typography.h5 }}>FILTERS</label>
+            <FilterListOutlinedIcon color="primary" fontSize="medium" />
+            {/* <label style={{ color: theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold, fontSize:theme.typography.h7, ml:1 }}>FILTERS</label> */}
+            <Typography variant="h4" color="primary" sx={{fontWeight:theme.typography.fontWeightBold}} ml={1}>
+              Filters
+            </Typography>
           </IconButton>
         </Box>
       </Container>

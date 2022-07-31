@@ -96,7 +96,50 @@ const Navbar = () => {
     <AppBar elevation={0} position="static" sx={{position:'relative' ,zIndex:(theme) => theme.zIndex.drawer + 1, borderBottom:'1px solid'+theme.palette.text.secondary }}>  
       <Container maxWidth="xl">                                     
         <Toolbar disableGutters>
+          <Box sx={{display: 'flex',flexDirection:'row', alignItems:'center'}}>
+          <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+              sx={{m:0,p:0,mr:2, display:{xs:'block', sm:'none'} , height:'24px'}}
+            >
+              <MenuIcon color="primary" fontSize="large"/>                       
+            </IconButton>
+            <Menu  
+              PaperProps={{ sx:{
+                backgroundColor:theme.palette.background.paper,
+              }}}                                                    // Menu component is used to display the navbar menu in the navbar when the menu button is clicked in mobile view
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", lg: "none" },
+              }}
+            >
+              {pages.map((page) => (
+                <Link to={page.link} key={page.name} style={{textDecoration:'none', color:theme.palette.text.primary}}>
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography variant="h5" textAlign="center">{page.name}</Typography>
+                </MenuItem>
+                </Link>
+              ))}
+            </Menu>
             <img src={images.HomeLogo} alt="" />
+          </Box>
+            
           <Typography
             variant="h5"
             noWrap
@@ -142,7 +185,7 @@ const Navbar = () => {
 
           <Box sx={{ flexGrow: 0, display: "flex" }}>
             <Tooltip title="Open Notifications">
-            <IconButton onClick={handleOpenNotificationsMenu} sx={{mr:2}}>
+            <IconButton onClick={handleOpenNotificationsMenu} sx={{mr:.5}}>
               <NotificationsNoneRoundedIcon fontSize="large"  />
             </IconButton>
             </Tooltip>
@@ -168,7 +211,7 @@ const Navbar = () => {
             <Tooltip title="Open settings">
               <IconButton
                 onClick={handleOpenUserMenu}
-                sx={{ p: 0, display: { xs: "none", lg: "block" } }}
+                sx={{ p: 0, display: { xs: "block", lg: "block" }, ml:.5, mr:{xs:0, sm:.5} }}
               >
               <StyledBadge
               overlap="circular"
@@ -180,7 +223,7 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'330px', p:0, m: 0, backgroundColor:theme.palette.background.paper} }}
+              PaperProps={{ sx: { width: "100%" , maxWidth:'180px',height:'100%',maxHeight:'360px', p:0, m: 0, backgroundColor:theme.palette.background.paper} }}
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -200,45 +243,7 @@ const Navbar = () => {
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: "flex", lg: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon color="primary" fontSize="large"/>                       
-            </IconButton>
-            <Menu  
-              PaperProps={{ sx:{
-                backgroundColor:theme.palette.background.paper,
-              }}}                                                    // Menu component is used to display the navbar menu in the navbar when the menu button is clicked in mobile view
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", lg: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <Link to={page.link} key={page.name} style={{textDecoration:'none', color:theme.palette.text.primary}}>
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography variant="h5" textAlign="center">{page.name}</Typography>
-                </MenuItem>
-                </Link>
-              ))}
-            </Menu>
+            
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", ml: 2 }}>
             <Typography
